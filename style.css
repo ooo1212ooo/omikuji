@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #fff9e6;
+  padding: 40px;
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#drawBtn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  background: #e85a4f;
+  color: white;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
