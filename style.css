@@ -1,68 +1,55 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #fff9e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: sans-serif;
-}
 
-.container {
-  position: relative;
-  text-align: center;
-}
 
-.box {
-  width: 220px;
-  height: 140px;
-  background: #e85a4f;
-  color: white;
-  font-size: 32px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  /* ふわふわアニメ */
-  animation: float 1.6s infinite ease-in-out;
-}
+    body {
+      background: #f7feff;
+    }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
+    .all_wrap {
+          height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 
-.paper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  min-width: 160px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  font-size: 28px;
-  opacity: 0;
-  transition: all 0.6s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
 
-.paper.show {
-  opacity: 1;
-  transform: translate(-50%, -120%) scale(1);
-}
-
-.retry {
-  margin-top: 30px;
-  padding: 12px 24px;
-  font-size: 20px;
-  border: none;
-  background: #e85a4f;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  display: none;
+    .container {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    .top_txt {
+        font-size: 20px;
+    }
+    .start {
+      text-align: center;
+        }
+    .start img {
+        width: 300px;
+    }
+    .show {
+        display: none;
+    }
+    button {
+        width: 280px;
+        margin-bottom: 80px;
+        padding: 20px;
+        border: none;
+        border-radius: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        background: #5ac2ce;
+    }
+    button:active {
+        transform: translateY(10px);
+        transition: 0.6s;
+    }
+    .fortune {
+        max-width: 500px;
+    }
+    .btn {
+      text-align: center;
+    }
+#reset {
+  display: none; /* 最初は非表示 */
 }

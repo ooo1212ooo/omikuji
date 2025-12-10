@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>おみくじ</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- ここがおみくじ箱 -->
-    <div class="box" id="box">おみくじ</div>
 
-    <!-- ここが結果の紙 -->
-    <div class="paper" id="paper"></div>
+  <div class="all_wrap">
 
-    <!-- もう一回ボタン -->
-    <button id="retry" class="retry">もう一回！</button>
-  </div>
+  <div class="inner">
+
+  <p id="start" class="start">
+    <img id="rotate" src="img/omikuji_box.png" alt="おみくじ">
+  </p>
+  <p>
+    <img src="" id="fortune" class="fortune">
+  </p>
+
+<div class="btn">
+  <button id="draw">おみくじを引く</button>
+  <button id="reset" style="display:none;">TOPにもどる</button>
+</div>
 
   <script src="common.js" defer></script>
+
+  </div>
+  </div>
 </body>
+
 </html>
