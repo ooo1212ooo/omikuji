@@ -1,18 +1,26 @@
-document.getElementById("drawBtn").addEventListener("click", function() {
+const box = document.getElementById("box");
+const paper = document.getElementById("paper");
+const retry = document.getElementById("retry");
 
-    // おみくじ結果のリスト
-    const omikuji = [
-        { name: "大吉", reward: "好きな化粧品をプレゼント🎁" },
-        { name: "吉", reward: "サンプル化粧品プレゼント✨" },
-        { name: "小吉", reward: "ポイント2倍💡" },
-        { name: "末吉", reward: "ミニサービス追加💛" },
-        { name: "凶", reward: "次回の運勢に期待…😇" }
-    ];
+const results = [
+  { text: "大吉", color: "#e74c3c" },
+  { text: "中吉", color: "#e67e22" },
+  { text: "小吉", color: "#3498db" },
+  { text: "末吉", color: "#9b59b6" },
+  { text: "吉",   color: "#2ecc71" },
+];
 
-    // ランダム抽選
-    const result = omikuji[Math.floor(Math.random() * omikuji.length)];
+box.addEventListener("click", () => {
+  const random = results[Math.floor(Math.random() * results.length)];
 
-    // 結果表示
-    document.getElementById("result").innerHTML =
-        `${result.name}<br><span style="font-size:18px">${result.reward}</span>`;
+  paper.textContent = random.text;
+  paper.style.color = random.color;
+
+  paper.classList.add("show");
+  retry.style.display = "inline-block";
+});
+
+retry.addEventListener("click", () => {
+  paper.classList.remove("show");
+  retry.style.display = "none";
 });
